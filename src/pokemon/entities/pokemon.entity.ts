@@ -1,0 +1,22 @@
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
+
+//Para indicar que es un esquema de DB
+@Schema()
+export class Pokemon extends Document {
+  //id: string -- Mongo lo crea
+
+  @Prop({
+    unique: true,
+    index: true,
+  })
+  name: string;
+
+  @Prop({
+    unique: true,
+    index: true,
+  })
+  no: number;
+}
+
+export const PokemonSchema = SchemaFactory.createForClass(Pokemon);

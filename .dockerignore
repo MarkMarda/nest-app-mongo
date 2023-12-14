@@ -1,0 +1,7 @@
+#Todos los archivos que no deseamos se copien
+
+dist/
+node_modules/
+mongo/
+.gitignore
+.git/
